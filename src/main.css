@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+/* Write your utility classes here */
+@tailwind utilities;
 body {
-  background: rgb(153, 148, 153);
+  background: rgb(146, 141, 146);
 }
