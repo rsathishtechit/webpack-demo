@@ -9,7 +9,7 @@ const commonConfig = merge([
   parts.extractCSS({ loaders: cssLoaders }),
 ]);
 
-const productionConfig = merge([]);
+const productionConfig = merge([parts.eliminateUnusedCSS()]);
 
 const developmentConfig = merge([
   { entry: ["webpack-plugin-serve/client"] },
