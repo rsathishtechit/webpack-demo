@@ -7,6 +7,7 @@ const commonConfig = merge([
   { entry: ["./src"] },
   parts.page({ title: "Demo" }),
   parts.extractCSS({ loaders: cssLoaders }),
+  parts.loadImages({ limit: 100 }),
 ]);
 
 const productionConfig = merge([parts.eliminateUnusedCSS()]);
