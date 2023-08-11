@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const glob = require("glob");
 const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
+const MyLoggerPlugin = require("./MyLoggerPlugin");
 
 const ALL_FILES = glob.sync(path.join(__dirname, "src/*.js"));
 
@@ -41,6 +42,7 @@ exports.extractCSS = ({ options = {}, loaders = [] } = {}) => {
       new MiniCssExtractPlugin({
         filename: "[name].css",
       }),
+      new MyLoggerPlugin(),
     ],
   };
 };
